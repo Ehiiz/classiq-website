@@ -49,22 +49,46 @@ mobileNav ? "-rotate-45 visible" : "rotate-45 hidden"
         className={`bg-trueGrey ease-in duration-300 fixed w-full ${
           mobileNav
             ? "translate-y-0 ease-in duration-500 fixed flex flex-col h-screen z-10"
-            : "-translate-y-full h-screen -top-14"
-        } text-white py-3 text-2xl font-DMSans`}
+            : "-translate-y-full h-screen -top-14 ease-in duration-500"
+        } text-white py-3 text-xl font-DMSans`}
       >
         <div className="px-4">
-          <p className="py-2 mb-4 hover:text-white cursor-pointer">
+          <p
+            className={`py-2 mb-4 hover:text-white cursor-pointer ${
+              mobileNav
+                ? "translate-x-0 ease-in duration-[2500ms]"
+                : "-translate-x-full ease-in duration-[2500ms]"
+            }`}
+          >
             {" "}
             <a href="">Galleries</a>
           </p>
-          <p className="py-2 mb-4  cursor-pointer">
+          <p
+            className={`py-2 mb-4 hover:text-white cursor-pointer ${
+              mobileNav
+                ? "translate-x-0 ease-in duration-[2200ms]"
+                : "-translate-x-full ease-in duration-[2200ms]"
+            }`}
+          >
             <a href="">Experiences</a>
           </p>
-          <p className="py-2 mb-4 hover:text-white cursor-pointer">
+          <p
+            className={`py-2 mb-4 hover:text-white cursor-pointer ${
+              mobileNav
+                ? "translate-x-0 ease-in duration-[1900ms]"
+                : "-translate-x-full ease-in duration-[1900ms]"
+            }`}
+          >
             {" "}
             <a href="https://student.ledgafinance.com/signin">Photoshoots</a>
           </p>
-          <p className="py-2 mb-4 cursor-pointer">
+          <p
+            className={`py-2 mb-4 hover:text-white cursor-pointer ${
+              mobileNav
+                ? "translate-x-0 ease-in duration-[1600ms]"
+                : "-translate-x-full ease-in duration-[1600ms]"
+            }`}
+          >
             {" "}
             <a href="https://merchant.ledgafinance.com/signin">Contact</a>
           </p>
