@@ -1,6 +1,7 @@
 import React, { MouseEventHandler, useEffect, useState, useRef } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -10,18 +11,18 @@ export default function Footer() {
       <div className=" flex flex-col items-center  text-dirtyBrown text-lg justify-center px-4 font-Montserrat">
         <p className="mb-2 hover:text-white cursor-pointer">
           {" "}
-          <a href="">Galleries</a>
+          <Link to="/gallery"> Galleries</Link>
         </p>
-        <p className=" mb-2   cursor-pointer">
+        <p className=" mb-2  hover:text-white cursor-pointer">
           <a href="">Experiences</a>
         </p>
         <p className=" mb-2  hover:text-white cursor-pointer">
           {" "}
           <a href="https://student.ledgafinance.com/signin">Photoshoots</a>
         </p>
-        <p className=" mb-2 cursor-pointer">
+        <p className=" mb-2 hover:text-white cursor-pointer">
           {" "}
-          <a href="https://merchant.ledgafinance.com/signin">Contact</a>
+          <Link to="/contact-us">Contact</Link>
         </p>
       </div>
     </div>
