@@ -5,13 +5,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Homepage from "./pages/homepage";
 import Contact from "./pages/contact";
+import Galleries from "./pages/galleries";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Contact />
+    <Galleries />
   </React.StrictMode>
 );
 

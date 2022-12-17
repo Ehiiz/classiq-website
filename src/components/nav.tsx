@@ -20,7 +20,7 @@ export default function Nav() {
 
         <ul
           onClick={toggleNav}
-          className="visible flex flex-col sm:hidden mx-2 my-2 py-2 px-4 items-center cursor-pointer"
+          className="visible z-30 flex flex-col sm:hidden mx-2 my-2 py-2 px-4 items-center cursor-pointer"
         >
           <li
             className={`w-14 h-0.5 ease-linear duration-300 ${
@@ -46,11 +46,11 @@ mobileNav ? "-rotate-45 visible" : "rotate-45 hidden"
       </div>
 
       <div
-        className={`bg-trueGrey ease-in duration-300 fixed top-14 w-full ${
+        className={`bg-trueGrey ease-in duration-300 fixed w-full ${
           mobileNav
             ? "translate-y-0 ease-in duration-500 fixed flex flex-col h-screen z-10"
-            : "translate-y-full h-screen"
-        } text-white py-3 text-xl font-Michroma`}
+            : "-translate-y-full h-screen -top-14"
+        } text-white py-3 text-2xl font-DMSans`}
       >
         <div className="px-4">
           <p className="py-2 mb-4 hover:text-white cursor-pointer">
@@ -64,15 +64,15 @@ mobileNav ? "-rotate-45 visible" : "rotate-45 hidden"
             {" "}
             <a href="https://student.ledgafinance.com/signin">Photoshoots</a>
           </p>
-          <p className="py-2 mb-4  cursor-pointer">
+          <p className="py-2 mb-4 cursor-pointer">
             {" "}
             <a href="https://merchant.ledgafinance.com/signin">Contact</a>
           </p>
         </div>
 
         <div
-          className={`w-full h-screen  translate-y-0 duration-1000 bg-goldYellow ${
-            mobileNav ? "visible translate-y-full bg-goldYellow" : ""
+          className={`w-full h-64  translate-y-0 duration-[2500ms] bg-goldYellow ${
+            mobileNav ? "visible translate-y-full bg-goldYellow mt-4" : ""
           }`}
         ></div>
       </div>
