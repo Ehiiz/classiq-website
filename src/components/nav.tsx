@@ -1,6 +1,7 @@
 import React, { MouseEventHandler, useEffect, useState, useRef } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   const [mobileNav, setMobileNav] = useState(false);
@@ -13,10 +14,12 @@ export default function Nav() {
     <header>
       <div
         className={`flex flex-row justify-between items-center ${
-          mobileNav ? "bg-trueGrey mb-0 ease-in duration-300" : "bg-transparent"
+          mobileNav ? "bg-trueGrey ease-in duration-300" : "bg-transparent"
         }`}
       >
-        <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mx-2 my-2"></div>
+        <Link to="/">
+          <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mx-2 my-2"></div>
+        </Link>
 
         <ul
           onClick={toggleNav}
@@ -49,8 +52,8 @@ mobileNav ? "-rotate-45 visible" : "rotate-45 hidden"
         className={`bg-trueGrey ease-in duration-300 fixed w-full ${
           mobileNav
             ? "translate-y-0 ease-in duration-500 fixed flex flex-col h-screen z-10"
-            : "-translate-y-full h-screen -top-14 ease-in duration-500"
-        } text-white py-3 text-xl font-DMSans`}
+            : "-translate-y-full h-screen -top-12 ease-in duration-500"
+        } text-white py-3 text-xl font-DMSans -bottom-12`}
       >
         <div className="px-4">
           <p
@@ -61,7 +64,7 @@ mobileNav ? "-rotate-45 visible" : "rotate-45 hidden"
             }`}
           >
             {" "}
-            <a href="">Galleries</a>
+            <Link to="/gallery"> Galleries</Link>
           </p>
           <p
             className={`py-2 mb-4 hover:text-white cursor-pointer ${
@@ -90,13 +93,13 @@ mobileNav ? "-rotate-45 visible" : "rotate-45 hidden"
             }`}
           >
             {" "}
-            <a href="https://merchant.ledgafinance.com/signin">Contact</a>
+            <Link to="/contact-us">Contact</Link>
           </p>
         </div>
 
         <div
           className={`w-full h-64  translate-y-0 duration-[2500ms] bg-goldYellow ${
-            mobileNav ? "visible translate-y-full bg-goldYellow mt-4" : ""
+            mobileNav ? "visible translate-y-full bg-goldYellow mt-6" : ""
           }`}
         ></div>
       </div>
