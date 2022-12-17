@@ -16,7 +16,7 @@ export default function Nav() {
           mobileNav ? "bg-trueGrey mb-0 ease-in duration-300" : "bg-transparent"
         }`}
       >
-        <div className="w-10 h-10 bg-white rounded-full mx-2 my-2"></div>
+        <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mx-2 my-2"></div>
 
         <ul
           onClick={toggleNav}

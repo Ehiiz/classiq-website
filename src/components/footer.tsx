@@ -5,7 +5,7 @@ import AOS from "aos";
 export default function Footer() {
   return (
     <div className="flex mt-24 py-4 flex-col items-center justify-center">
-      <div className="w-10 h-10 bg-white rounded-full mx-2 my-2"></div>
+      <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mx-2 my-2"></div>
 
       <div className=" flex flex-col items-center  text-dirtyBrown text-lg justify-center px-4 font-Montserrat">
         <p className="mb-2 hover:text-white cursor-pointer">
