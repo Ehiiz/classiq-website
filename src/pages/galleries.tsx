@@ -3,6 +3,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
+import { Link } from "react-router-dom";
 
 export default function Galleries() {
   return (
@@ -10,12 +11,15 @@ export default function Galleries() {
       <div className="w-full h-full bg-black bg-opacity-50 flex flex-col justify-between">
         <Nav />
         <div className="px-4 flex mt-16 overflow-x-auto space-x-8 scrollbar-hide">
-          <div className="flex-shrink-0 h-72 w-64 relative">
-            <div className="h-64 w-64 bg-[url('https://images.unsplash.com/photo-1568819317551-31051b37f69f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2V4eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60')] bg-cover rounded-sm"></div>
-            <p className="font-Montserrat font-bold absolute bottom-5 text-dirtyBrown">
-              sexy
-            </p>
-          </div>
+          <Link to="/pictures">
+            <div className="flex-shrink-0 h-72 w-64 relative">
+              <div className="h-64 w-64 bg-[url('https://images.unsplash.com/photo-1568819317551-31051b37f69f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2V4eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60')] bg-cover rounded-sm"></div>
+              <p className="font-Montserrat font-bold absolute bottom-5 text-dirtyBrown">
+                sexy
+              </p>
+            </div>
+          </Link>
+
           <div className="flex-shrink-0 h-72 w-64 relative">
             <div className="h-64 w-64 bg-[url('https://images.unsplash.com/photo-1647891938250-954addeb9c51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80')] drop-shadow-2xl bg-cover rounded-sm"></div>
             <p className="font-Montserrat font-bold absolute bottom-5 text-dirtyBrown">
